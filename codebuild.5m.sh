@@ -4,19 +4,18 @@
  # * <bitbar.version>v1.0</bitbar.version>
  # * <bitbar.author>sdbondi</bitbar.author>
  # * <bitbar.author.github>sdbondi</bitbar.author.github>
- # * <bitbar.desc>Displays the statuses of the last N builds</bitbar.desc>
+ # * <bitbar.desc>Displays last builds for codebuild projects</bitbar.desc>
  # * <bitbar.dependencies>bash</bitbar.dependencies>
  # * <bitbar.dependencies>aws-sdk</bitbar.dependencies>
  # * <bitbar.dependencies>jq</bitbar.dependencies>
  # * <bitbar.image></bitbar.image>
- # * <bitbar.abouturl>https://github.com/sdbondi/bitbar-coebuild</bitbar.abouturl>
+ # * <bitbar.abouturl>https://github.com/sdbondi/bitbar-plugins</bitbar.abouturl>
 
-PROJECTS=(bigneon-api bigneon-web)
+PROJECTS=(my-project-1 my-project-2)
 MAX_BUILDS=5
-
 EXTRA_PATHS=
 
-export PATH='/usr/local/bin:/usr/bin:$EXTRA_PATHS:$PATH'
+export PATH="/usr/local/bin:/usr/bin:$EXTRA_PATHS:$PATH"
 
 echo "CodeBuild"
 echo "---"
