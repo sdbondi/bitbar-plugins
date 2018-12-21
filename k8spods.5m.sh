@@ -28,7 +28,7 @@ for n in "${NAMESPACES[@]}"; do
     NAME=$(echo $p | jq -r '.metadata.name')
     PHASE=$(echo $p | jq -r '.status.phase')
     if [[ "$PHASE" == "Running" || "$PHASE" == "Succeeded" ]]; then
-      echo "--:white_check_mark: $NAME ($TAG): $PHASE | color=#000"
+      echo "--:white_check_mark: $NAME ($TAG): $PHASE | color=#fff terminal=true bash=kubectl param1=-n param2=$n param3=exec param4=-it param5=\"$NAME -- /bin/sh\" refresh=true"
     else
       echo "--:large_orange_diamond: $NAME ($TAG): $PHASE | color=#ff0000"
     fi
