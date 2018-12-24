@@ -1,0 +1,6 @@
+namespaces=["staging", "production"]
+
+cluster-name="my-cluster"
+kubectl-path="/usr/local/bin/kubectl"
+aws-iam-authenticator-path="/path/to/aws-iam-authenticator"
+
