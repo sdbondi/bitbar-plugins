@@ -29,6 +29,7 @@ for p in "${PROJECTS[@]}"; do
     readarray -t PROJECT_BUILDS <<<"$RAW_PROJECT_BUILDS"
     for pb in "${PROJECT_BUILDS[@]}"; do
       echo "--$(echo $pb | jq -r '.sourceVersion') - $(echo $pb | jq -r '.buildStatus')"
+      echo "--$(date -r $(echo $pb | jq -r '.endTime' | cut -d. -f1 )) | alternate=true"
     done
   done
 done
